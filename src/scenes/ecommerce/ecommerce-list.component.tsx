@@ -5,7 +5,7 @@ import { data } from './data';
 export const EcommerceListScreen = ({ navigation }): LayoutListElement => {
 
   const onItemPress = (index: number): void => {
-    navigation.navigate(data[index].route);
+    navigation.navigate('ProductDetails');
   };
 
   return (

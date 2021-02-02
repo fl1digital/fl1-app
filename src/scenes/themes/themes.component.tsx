@@ -48,7 +48,7 @@ export const ThemesScreen = ({ navigation }): React.ReactElement => {
   };
 
   const createThemeNameForItem = (theme: ThemeItem): string => {
-    return `${theme.mapping} ${theme.name}`.toUpperCase();
+    return `FL1 ${theme.name}`.toUpperCase();
   };
 
   const toggleRestartModal = (): void => {
@@ -88,7 +88,7 @@ export const ThemesScreen = ({ navigation }): React.ReactElement => {
       style={styles.safeArea}
       insets='top'>
       <TopNavigation
-        title='Kitten Tricks'
+        title='FL1 App'
         leftControl={renderDrawerAction()}
       />
       <Divider/>

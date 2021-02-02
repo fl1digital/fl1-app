@@ -12,14 +12,18 @@ import {
   MenuItemType,
   Text,
 } from '@ui-kitten/components';
-import { BookIcon, GithubIcon } from '../../components/icons';
+import { HomeIcon, CartIcon, BookIcon, MailIcon, GridIcon, SettingsIcon } from '../../components/icons';
 import { SafeAreaLayout } from '../../components/safe-area-layout.component';
 import { WebBrowserService } from '../../services/web-browser.service';
 import { AppInfoService } from '../../services/app-info.service';
 
 const DATA: MenuItemType[] = [
-  { title: 'Libraries', icon: GithubIcon },
-  { title: 'Documentation', icon: BookIcon },
+  { title: 'Home', icon: HomeIcon },
+  { title: 'Workshops', icon: BookIcon },
+  { title: 'Basket', icon: CartIcon },
+  { title: 'Products', icon: GridIcon },
+  { title: 'App Options', icon: SettingsIcon },
+  { title: 'Get In Touch', icon: MailIcon },
 ];
 
 const version: string = AppInfoService.getVersion();
@@ -30,12 +34,32 @@ export const HomeDrawer = ({ navigation }): DrawerElement => {
     switch (index) {
       case 0: {
         navigation.toggleDrawer();
-        navigation.navigate('Libraries');
+        navigation.navigate('Welcome');
         return;
       }
       case 1: {
-        WebBrowserService.openBrowserAsync('https://akveo.github.io/react-native-ui-kitten');
         navigation.toggleDrawer();
+        navigation.navigate('Workshops');
+        return;
+      }
+      case 2: {
+        navigation.toggleDrawer();
+        navigation.navigate('Basket');
+        return;
+      }
+      case 3: {
+        navigation.toggleDrawer();
+        navigation.navigate('Products');
+        return;
+      }
+      case 4: {
+        navigation.toggleDrawer();
+        navigation.navigate('Settings');
+        return;
+      }
+      case 5: {
+        navigation.toggleDrawer();
+        navigation.navigate('More');
         return;
       }
     }
@@ -53,7 +77,7 @@ export const HomeDrawer = ({ navigation }): DrawerElement => {
         <Text
           style={styles.profileName}
           category='h6'>
-          Kitten Tricks
+          FL1 Digital
         </Text>
       </View>
     </Layout>

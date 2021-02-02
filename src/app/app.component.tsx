@@ -11,6 +11,7 @@ import { SplashImage } from '../components/splash-image.component';
 import { AppNavigator } from '../navigation/app.navigator';
 import { AppStorage } from '../services/app-storage.service';
 import { Mapping, Theme, Theming } from '../services/theme.service';
+import { CartProvider } from '../services/cart-context';
 
 const loadingTasks: Task[] = [
   // Should be used it when running Expo.
@@ -40,10 +41,12 @@ const App = ({ mapping, theme }): React.ReactElement => {
         <ApplicationProvider {...currentMapping} theme={currentTheme}>
           <Theming.MappingContext.Provider value={mappingContext}>
             <Theming.ThemeContext.Provider value={themeContext}>
+              <CartProvider>
               <SafeAreaProvider>
                 <StatusBar/>
                 <AppNavigator/>
               </SafeAreaProvider>
+              </CartProvider>
             </Theming.ThemeContext.Provider>
           </Theming.MappingContext.Provider>
         </ApplicationProvider>

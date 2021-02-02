@@ -58,6 +58,18 @@ export const SearchIcon = (style: ImageStyle): IconElement => (
   <Icon {...style} name='search'/>
 );
 
+export const MailIcon = (style: ImageStyle): IconElement => (
+  <Icon {...style} name='email'/>
+);
+
+export const CartIcon = (style: ImageStyle): IconElement => (
+  <Icon {...style} name='shopping-bag-outline'/>
+);
+
+export const HomeIcon = (style: ImageStyle): IconElement => (
+  <Icon {...style} name='home-outline'/>
+);
+
 export const SettingsIcon = (style: ImageStyle): IconElement => (
   <Icon {...style} name='settings'/>
 );

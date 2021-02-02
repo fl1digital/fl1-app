@@ -1,7 +1,9 @@
 import React from 'react';
-import { AppLoading as ExpoAppLoading, SplashScreen } from 'expo';
+import ExpoAppLoading from 'expo-app-loading'
+import * as SplashScreen from 'expo-splash-screen'
 import * as Font from 'expo-font';
 import { Asset } from 'expo-asset';
+import { ConversationListScreen } from 'src/scenes/messaging/conversation-list.component';
 
 type TaskResult = [string, any];
 type Task = () => Promise<TaskResult | null>;
@@ -28,7 +30,7 @@ export const LoadAssetsTask = (assets: number[]): Promise<TaskResult> => {
 /*
  * Prevent splash screen from hiding since it is controllable by AppLoading component.
  */
-SplashScreen.preventAutoHide();
+SplashScreen.preventAutoHideAsync();
 
 /**
  * Loads application configuration and returns content of the application when done.
@@ -51,7 +53,7 @@ export const AppLoading = (props: ApplicationLoaderProps): React.ReactElement =>
 
   const onTasksFinish = (): void => {
     setLoading(false);
-    SplashScreen.hide();
+    SplashScreen.hideAsync();
   };
 
   const saveTaskResult = (result: [string, any] | null): void => {
@@ -76,6 +78,7 @@ export const AppLoading = (props: ApplicationLoaderProps): React.ReactElement =>
       startAsync={startTasks}
       onFinish={onTasksFinish}
       autoHideSplash={false}
+      onError={console.warn}
     />
   );
 

@@ -24,7 +24,7 @@ export const LayoutsScreen = (props): React.ReactElement => {
       style={styles.safeArea}
       insets='top'>
       <TopNavigation
-        title='Kitten Tricks'
+        title='FL1 App'
         leftControl={renderDrawerAction()}
       />
       <Divider/>

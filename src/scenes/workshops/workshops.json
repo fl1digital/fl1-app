@@ -1,0 +1,437 @@
+{
+    "rss": {
+      "-xmlns:content": "http://purl.org/rss/1.0/modules/content/",
+      "-xmlns:wfw": "http://wellformedweb.org/CommentAPI/",
+      "-xmlns:dc": "http://purl.org/dc/elements/1.1/",
+      "-xmlns:atom": "http://www.w3.org/2005/Atom",
+      "-xmlns:sy": "http://purl.org/rss/1.0/modules/syndication/",
+      "-xmlns:slash": "http://purl.org/rss/1.0/modules/slash/",
+      "-version": "2.0",
+      "channel": {
+        "title": "FL1 Digital",
+        "atom:link": {
+          "-href": "https://fl1digital.com/feed/",
+          "-rel": "self",
+          "-type": "application/rss+xml"
+        },
+        "link": "https://fl1digital.com",
+        "description": "Improving your business, one pixel at a time.",
+        "lastBuildDate": "Wed, 20 Jan 2021 12:16:57 +0000",
+        "language": "en-US",
+        "sy:updatePeriod": "
+      hourly	",
+        "sy:updateFrequency": "
+      1	",
+        "generator": "https://wordpress.org/?v=5.2.1",
+        "item": [
+          {
+            "title": "Buy Jason a new Macbook with an M1 chip",
+            "link": "https://fl1digital.com/buy-jason-a-new-macbook-with-an-m1-chip/",
+            "comments": "https://fl1digital.com/buy-jason-a-new-macbook-with-an-m1-chip/#respond",
+            "pubDate": "Wed, 20 Jan 2021 12:16:57 +0000",
+            "dc:creator": "Suzy Forrest",
+            "category": "Competitions",
+            "guid": {
+              "-isPermaLink": "false",
+              "#text": "https://www.fl1digital.com/?p=4044"
+            },
+            "description": "<p>The post <a rel=\"nofollow\" href=\"https://fl1digital.com/buy-jason-a-new-macbook-with-an-m1-chip/\">Buy Jason a new Macbook with an M1 chip</a> appeared first on <a rel=\"nofollow\" href=\"https://fl1digital.com\">FL1 Digital</a>.</p>
+  ",
+            "content:encoded": "<form action=\"https://www.paypal.com/donate\" method=\"post\" target=\"_top\">
+  <input type=\"hidden\" name=\"business\" value=\"samjas73@gmail.com\" /><br />
+  <input type=\"hidden\" name=\"item_name\" value=\"To buy m a new Macbook M1\" /><br />
+  <input type=\"hidden\" name=\"currency_code\" value=\"GBP\" /><br />
+  <input type=\"image\" src=\"https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif\" border=\"0\" name=\"submit\" title=\"PayPal - The safer, easier way to pay online!\" alt=\"Donate with PayPal button\" /><br />
+  <img alt=\"\" border=\"0\" src=\"https://www.paypal.com/en_GB/i/scr/pixel.gif\" width=\"1\" height=\"1\" /><br />
+  </form>
+  <p>The post <a rel=\"nofollow\" href=\"https://fl1digital.com/buy-jason-a-new-macbook-with-an-m1-chip/\">Buy Jason a new Macbook with an M1 chip</a> appeared first on <a rel=\"nofollow\" href=\"https://fl1digital.com\">FL1 Digital</a>.</p>
+  ",
+            "wfw:commentRss": "https://fl1digital.com/buy-jason-a-new-macbook-with-an-m1-chip/feed/",
+            "slash:comments": "0"
+          },
+          {
+            "title": "Geeky Projects: The Internet Enabled Biscuit Tin",
+            "link": "https://fl1digital.com/geeky-projects-the-internet-enabled-biscuit-tin/",
+            "comments": "https://fl1digital.com/geeky-projects-the-internet-enabled-biscuit-tin/#respond",
+            "pubDate": "Fri, 09 Oct 2020 12:20:19 +0000",
+            "dc:creator": "alex@seesaw-online.com",
+            "category": "Special Projects",
+            "guid": {
+              "-isPermaLink": "false",
+              "#text": "https://www.fl1digital.com/?p=3938"
+            },
+            "description": "<p>We’ve always celebrated geekiness and when it comes to personal geeky projects, these are often a great learning ground too! We take a look at Chief Geek Jason’s latest creation…</p>
+  <p>The post <a rel=\"nofollow\" href=\"https://fl1digital.com/geeky-projects-the-internet-enabled-biscuit-tin/\">Geeky Projects: The Internet Enabled Biscuit Tin</a> appeared first on <a rel=\"nofollow\" href=\"https://fl1digital.com\">FL1 Digital</a>.</p>
+  ",
+            "content:encoded": "<p>I don’t know where the inspiration for this came from, maybe it was seeing my biscuit tin disappear upstairs most evenings with one of the kids looking decidedly shifty with a biscuit tin shaped bulge under their jumpers.</p>
+  <p>Either way as a software developer, I’ve always been curious about the link between software and hardware with hardware always being something of a mystery to me.</p>
+  <p>That all changed when I bought a Raspberry Pi, a well known low cost computer running an ARM chip that offers a simple IO (Input/Output) interface allowing you to plug in custom hardware that could be controlled by simple scripts.</p>
+  <p>It was probably a slightly drunken conversation with a fellow developer at Wagama’s then, that planted the seed. What if you could take a random household item and make it “smart” by connecting it to the internet? The “smart” biscuit tin was born, as let’s face it, everyone loves biscuits right?</p>
+  <p><strong>So….after a tonne of Googling, here’s what I found:</strong></p>
+  <p>Raspberry Pi, connected to something called a HX711 Load Cell (the thing that measures weight), some wires, some jack plugs and that was the hardware sorted.</p>
+  <p><img class=\"alignnone size-full wp-image-3941\" src=\"https://www.fl1digital.com/stuff/uploads/Biscuit-tin-2.jpg\" alt=\"Biscuit tin\" width=\"601\" height=\"802\" srcset=\"https://fl1digital.com/stuff/uploads/Biscuit-tin-2.jpg 601w, https://fl1digital.com/stuff/uploads/Biscuit-tin-2-225x300.jpg 225w\" sizes=\"(max-width: 601px) 100vw, 601px\" /></p>
+  <p><strong>How about the software?</strong></p>
+  <p>To measure the biscuit weight, I needed to write a small controller script to run on the Rasberry Pi. The script would take a measure of the Load cell every couple of seconds.</p>
+  <p>What I quickly realised is that even when static, the weight reads varied, so I had to build in a tolerance of +/- <em>n</em> grams. Normally at FL1 we used PHP, so time to quickly learn Python!</p>
+  <p>Next, was picking up notable changes. I bought a Sainsburys variety pack of biscuits, just so I could weigh them, and I can tell you now, the average biscuit weight is 9g! So we have nominal weight. Then I built in thresholds. The thresholds would be used to guess if “one biscuit has been removed”, “a few biscuits have been removed” or “good god, someone‘s cleaned you out!”. So with 3 thresholds and a simple 10% tolerance, we’re good to go….and it worked!</p>
+  <p><img class=\"alignnone size-full wp-image-3940\" src=\"https://www.fl1digital.com/stuff/uploads/Biscuit-tin-3.jpg\" alt=\"Biscuit tin\" width=\"435\" height=\"931\" srcset=\"https://fl1digital.com/stuff/uploads/Biscuit-tin-3.jpg 435w, https://fl1digital.com/stuff/uploads/Biscuit-tin-3-140x300.jpg 140w\" sizes=\"(max-width: 435px) 100vw, 435px\" /></p>
+  <p><strong>So what next?</strong></p>
+  <p>Well, I guess you need to tell someone right?</p>
+  <p>I did what any web developer would do and built a simple <a href=\"https://fl1digital.com/what-is-an-api/\">API</a> using PHP.</p>
+  <p>Simply put, the Raspberry takes a reading, if it’s out of tolerance, it posts it to the API.</p>
+  <p>The API decides based on the reading whether it’s a biscuit, a few biscuits or a massive biscuit raid, then sends a notification via email.</p>
+  <p>Great, so now my inbox is full of my kids’ biscuit tin raids…that’s not enough, we can’t stop there!</p>
+  <p>Next, an App….because, well, why not!</p>
+  <p>Being from an old skool C# background, I figured why try out Xamarin? Xamarin is Microsoft’s last Mobile application framework for .NET.</p>
+  <p>So after a few weeks, voila, now I can monitor every movement of my biscuit tin, every addition, removal and I get push notifications in real-time!</p>
+  <p><img class=\"alignnone size-full wp-image-3942\" src=\"https://www.fl1digital.com/stuff/uploads/Biscuit-tin.jpg\" alt=\"Biscuit tin\" width=\"601\" height=\"491\" srcset=\"https://fl1digital.com/stuff/uploads/Biscuit-tin.jpg 601w, https://fl1digital.com/stuff/uploads/Biscuit-tin-300x245.jpg 300w\" sizes=\"(max-width: 601px) 100vw, 601px\" /></p>
+  <p><strong>So…was it worth it?</strong></p>
+  <p>YES! I learnt soooo much, and got to build my first mobile app too! Not only that, my biscuit is now full again, since that little wire has been hanging out of the back, my little biscuit lovers won’t go near it 😉</p>
+  <p><strong>Useful links:</strong></p>
+  <p>Raspberry Pi starter kit: <a href=\"https://thepihut.com/collections/featured-products/products/raspberry-pi-starter-kit\">https://thepihut.com/collections/featured-products/products/raspberry-pi-starter-kit</a></p>
+  <p>HX711 Load Cell: <a href=\"https://www.amazon.co.uk/Weight-Sensor-Weighing-Arduino-Raspberry-Black/dp/B07G2QVVH3/ref=sr_1_13?crid=1FA6NK1HH90CT&amp;dchild=1&amp;keywords=hx711&amp;qid=1602105839&amp;sprefix=hx7%2Caps%2C162&amp;sr=8-13\" class=\"broken_link\">https://www.amazon.co.uk/Weight-Sensor-Weighing-Arduino-Raspberry-Black/dp/B07G2QVVH3/ref=sr_1_13?crid=1FA6NK1HH90CT&amp;dchild=1&amp;keywords=hx711&amp;qid=1602105839&amp;sprefix=hx7%2Caps%2C162&amp;sr=8-13</a></p>
+  <p>The post <a rel=\"nofollow\" href=\"https://fl1digital.com/geeky-projects-the-internet-enabled-biscuit-tin/\">Geeky Projects: The Internet Enabled Biscuit Tin</a> appeared first on <a rel=\"nofollow\" href=\"https://fl1digital.com\">FL1 Digital</a>.</p>
+  ",
+            "wfw:commentRss": "https://fl1digital.com/geeky-projects-the-internet-enabled-biscuit-tin/feed/",
+            "slash:comments": "0"
+          },
+          {
+            "title": "What is an API?",
+            "link": "https://fl1digital.com/what-is-an-api/",
+            "comments": "https://fl1digital.com/what-is-an-api/#respond",
+            "pubDate": "Mon, 17 Aug 2020 12:21:51 +0000",
+            "dc:creator": "fl1admin",
+            "category": [
+              "E-commerce",
+              "Hints and Tips",
+              "Marketing",
+              "Technology"
+            ],
+            "guid": {
+              "-isPermaLink": "false",
+              "#text": "https://www.fl1digital.com/?p=3897"
+            },
+            "description": "<p>What is an API? You might have heard the term banded around and wondered what it is? It’s an Application Programming Interface, but what’s that actually in English? Let us explain… Ok, so here’s the executive summary: An Application Programming Interface (API) is a way for two pieces of software to talk to each other [&#8230;]</p>
+  <p>The post <a rel=\"nofollow\" href=\"https://fl1digital.com/what-is-an-api/\">What is an API?</a> appeared first on <a rel=\"nofollow\" href=\"https://fl1digital.com\">FL1 Digital</a>.</p>
+  ",
+            "content:encoded": "<p><strong>What is an API?</strong></p>
+  <p>You might have heard the term banded around and wondered what it is? It’s an Application Programming Interface, but what’s that actually in English? Let us explain…</p>
+  <p>Ok, so here’s the executive summary:</p>
+  <p>An Application Programming Interface (API) is a way for two pieces of software to talk to each other behind the scenes.</p>
+  <p>There you go, that wasn’t that complicated was it, and unless you want to get a little more under the hood, you’re welcome to leave at this point 😉</p>
+  <p><strong>Ok, where are APIs used in the real world?</strong></p>
+  <p>First off APIs have been around since before the internet, even before MS-DOS days. Applications such as Microsoft Word, Excel, Sage Accounting have all have an API allowing software to share data with their software. This has allowed your spreadsheet to pull in data from a 3 rd piece of software or add-ons for Sage Accounting to use Sage data to add on further functionality not provided by the Sage product.</p>
+  <p>Today, with the web, the concept is the same, the difference is you’re reading and writing data across the web rather than on a local PC.</p>
+  <p>So that’s the history lesson out of the way, some uses…</p>
+  <p>Let’s imagine you have an online shop and needed to push you order data in to your Xero accounting software. This is where your online shop would connect to Xero behind the scenes using the XERO API, login (Authenticate), then post the data through to your accounts).</p>
+  <p>Let’s image your shop was linked to MailChimp to add people to your mailing list. Yup, you guessed it, that uses an API too, this time the MailChimp API.</p>
+  <p>Want to embed Webinars from Zoom or GoToWebinar, you’ll be using an API.<br />
+  How about pushing enquiries from your site in to your Sales CRM software? You guessed it, an API.</p>
+  <ul>
+  <li>Pushing enquiries from your site to a CRM</li>
+  <li>Pull customer records from an ordering system to be available on your website</li>
+  <li>Downloading licensed fonts</li>
+  <li>Using Mapping services like Google Maps</li>
+  <li>Using Post code lookups on your shop</li>
+  <li>Getting shipping costs for your order</li>
+  <li>Getting the latest exchange rates in realtime</li>
+  <li>Looking up the market value of a property</li>
+  <li>Getting a car insurance quote from an insurance provider</li>
+  </ul>
+  <p>All these things rely on APIs.</p>
+  <p>So, this can cut two ways of course, you don’t have to pulling in data from another source, what about if you wanted your data or service to be available online?</p>
+  <p>This is where having your own API can be useful allowing suppliers, customers or generally interested parties to access products, pricing, articles or just about anything!</p>
+  <p>Anything you should know?</p>
+  <p>One of the most common uses these days for APIs is with Mobile apps to retrieve data from a website. If you ever wondered how you can make a purchase on an app, log in to a website and by magic it knows about your purchase? Well now you know!</p>
+  <p>If this has sparked your interest, or you think linking utilising data this way could help your business, drop us a line, and we’ll pick up your query….via an API of course 😉</p>
+  <p>The post <a rel=\"nofollow\" href=\"https://fl1digital.com/what-is-an-api/\">What is an API?</a> appeared first on <a rel=\"nofollow\" href=\"https://fl1digital.com\">FL1 Digital</a>.</p>
+  ",
+            "wfw:commentRss": "https://fl1digital.com/what-is-an-api/feed/",
+            "slash:comments": "0"
+          },
+          {
+            "title": "Taking payments online… What is Strong Customer Authentication (SCA)?",
+            "link": "https://fl1digital.com/what-is-strong-customer-authentication-sca/",
+            "comments": "https://fl1digital.com/what-is-strong-customer-authentication-sca/#respond",
+            "pubDate": "Wed, 04 Sep 2019 12:12:28 +0000",
+            "dc:creator": "fl1admin",
+            "category": [
+              "FL1",
+              "E-commerce",
+              "General",
+              "Hints and Tips",
+              "Technology",
+              "announcements",
+              "business",
+              "ecommerce",
+              "legal",
+              "Marketing",
+              "tech tips",
+              "website",
+              "woocommerce",
+              "WordPress"
+            ],
+            "guid": {
+              "-isPermaLink": "false",
+              "#text": "https://fl1digital.com/?p=3568"
+            },
+            "description": "<p>Strong Customer Authentication (SCA)* is a new regulation taking effect on 14th September 2019, if you’re using WordPress and WooCommerce this will effect you!</p>
+  <p>The post <a rel=\"nofollow\" href=\"https://fl1digital.com/what-is-strong-customer-authentication-sca/\">Taking payments online&#8230; What is Strong Customer Authentication (SCA)?</a> appeared first on <a rel=\"nofollow\" href=\"https://fl1digital.com\">FL1 Digital</a>.</p>
+  ",
+            "content:encoded": "<p>Strong Customer Authentication (SCA)* is a new regulation taking effect on September 14, 2019 that requires merchants to use multiple methods of verifying customers’ identities.</p>
+  <p>If you’re using WordPress and WooCommerce this will effect you!</p>
+  <p>SCA in simple terms is an update to the existing 3d Secure system which currently prompts the customer to provide the additional authentication elements, and the order will only be completed once they do that successfully.</p>
+  <p><strong>Sites that aren’t using the SCA compliant WooCommerce and Payment Gateway updates, may start failing online transactions after 14<sup>th</sup> September 2019.</strong></p>
+  <p>The latest version of WooCommerce has support for the latest updates, along with the following Payment Gateways:</p>
+  <p><a href=\"https://woocommerce.com/products/stripe/\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Stripe</a><br />
+  <a href=\"https://woocommerce.com/products/pay-with-amazon/\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Amazon Pay</a><br />
+  <a href=\"https://woocommerce.com/products/woocommerce-global-payments-direct/\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Global Payments Gateway (formerly Realex)</a><br />
+  <a href=\"https://wordpress.org/plugins/woocommerce-gateway-paypal-powered-by-braintree/\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">PayPal powered by Braintree</a><br />
+  <a href=\"https://woocommerce.com/products/sage-pay-form/\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Sage Pay</a></p>
+  <p>For a more comprehensive discussion around SCA, visit:</p>
+  <p><u><a href=\"https://woocommerce.com/posts/introducing-strong-customer-authentication-sca/#\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">https://woocommerce.com/posts/introducing-strong-customer-authentication-sca/#</a></u></p>
+  <p>If you’re unsure about your website or need to book an upgrade or impartial review, <a href=\"https://fl1digital.com/contact/\">get in touch</a>, we’re here to help!</p>
+  <p>The post <a rel=\"nofollow\" href=\"https://fl1digital.com/what-is-strong-customer-authentication-sca/\">Taking payments online&#8230; What is Strong Customer Authentication (SCA)?</a> appeared first on <a rel=\"nofollow\" href=\"https://fl1digital.com\">FL1 Digital</a>.</p>
+  ",
+            "wfw:commentRss": "https://fl1digital.com/what-is-strong-customer-authentication-sca/feed/",
+            "slash:comments": "0"
+          },
+          {
+            "title": "The impact of Brexit on your website",
+            "link": "https://fl1digital.com/the-impact-of-brexit-on-your-website/",
+            "comments": "https://fl1digital.com/the-impact-of-brexit-on-your-website/#respond",
+            "pubDate": "Wed, 10 Apr 2019 18:52:47 +0000",
+            "dc:creator": "fl1admin",
+            "category": [
+              "E-commerce",
+              "FL1",
+              "General",
+              "Hints and Tips",
+              "Marketing",
+              "Technology",
+              "announcements",
+              "brexit",
+              "business",
+              "ecommerce",
+              "pci dss",
+              "security"
+            ],
+            "guid": {
+              "-isPermaLink": "false",
+              "#text": "https://fl1digital.com/?p=3513"
+            },
+            "description": "<p>While Brexit has many uncertainties, what is certain is this will impact both business and your website. We look at some of the possible outcomes…</p>
+  <p>The post <a rel=\"nofollow\" href=\"https://fl1digital.com/the-impact-of-brexit-on-your-website/\">The impact of Brexit on your website</a> appeared first on <a rel=\"nofollow\" href=\"https://fl1digital.com\">FL1 Digital</a>.</p>
+  ",
+            "content:encoded": "<p>On the 23rd June 2016, Britain voted to leave the European Union (EU).</p>
+  <p>Whether you agree with the decision or not, change is inevitable, albeit it’s unclear how things will change.</p>
+  <p>Whilst how and when the UK leaves is still undecided, what is certain is that it will impact both your business and your website.</p>
+  <p><strong>Devaluation of the Pound</strong></p>
+  <p>A devalued pound can potentially make goods and services more competitively priced outside of the UK, especially with digital or content-based goods that don’t require shipping fees, such as e-learning content and software.</p>
+  <p>Conversely, if e-commerce sites ship products from Europe to customer/manufacturer, this can have an adverse effect, resulting in increased purchase and shipping costs. In turn, this could potentially mean pricing on UK sites being less competitive.<strong> </strong></p>
+  <p><strong>Distance Selling Regulations/Consumer Contracts Regulations</strong></p>
+  <p>On the 13th June 2014 Consumer Contracts Regulations replaced the previous Distance Selling Regulations under directive <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32011L0083&amp;rid=1\" target=\"_blank\" rel=\"noopener noreferrer\">DIRECTIVE 2011/83/EU</a>.</p>
+  <p>The legislation affected all 28 member states and aimed to update and improve on the previous Distance Selling Regulations in respect of contracts negotiated away from business premises.</p>
+  <p>Some of the updates included:</p>
+  <ul>
+  <li>Better refund rights</li>
+  <li>Banning pre-ticked boxes on websites</li>
+  <li>Eliminating hidden charges and costs on the internet</li>
+  <li>Clearer information on who pays for returning goods</li>
+  <li>Eliminating surcharges for the use of credit cards and hotlines</li>
+  </ul>
+  <p>Whilst it’s unclear whether this will change for UK businesses, it’s not inconceivable that the UK could derive their own adapted version of the current EU regulations that are currently in place.</p>
+  <p><strong>Shipping</strong></p>
+  <p>It’s likely that when we leave, UK businesses will see a large hike in the amount that is charged for shipping. In turn, this could result in a decrease of trade from consumers in the European Union, who were used to minimal shipping prices in the first instance.</p>
+  <p>Similarly, if e-commerce sites ship products from Europe to customer/manufacturer and then sell on, import prices of materials and products could increase. This, in turn, could reduce the number of sales we see on e-commerce websites.</p>
+  <p><strong>GDPR</strong></p>
+  <p>Unless you’ve been living on a remote island for the last year, at the very least you’d have heard of GDPR, which came into effect on the 25th May 2018. If you’re not familiar with the General Data Protection Act <a href=\"https://fl1digital.com/make-website-gdpr-compliant-data-general-protection-act/\">This will bring you up to speed</a></p>
+  <p>Whilst the introduction of GDPR undoubtedly impacted businesses, and will continue to do so for some time, it’s entirely possible that the UK may, in time, adopt different legislation in this area, meaning it could be all change again!</p>
+  <p><strong>Digital Single Market</strong></p>
+  <p>The Digital Single Market is a strategy of the European Commission to ensure access to online activities for individuals and businesses under conditions of fair competition, consumer and data protection, removing geo-blocking and copyright issues.</p>
+  <p>It’s not clear to see how and when this might impact UK websites at this stage, however it’s possible there could be mid to long-term changes as a result of Brexit.</p>
+  <p>Some of the objectives of the Digital Single Market are:</p>
+  <ul>
+  <li>New rules to stop unjustified geo-blocking, which will be effective from the 3rd December 2018</li>
+  <li>Revised consumer protection rules that will enter into force in 2020</li>
+  <li>New VAT rules for online sales of goods and services that will enter into force in 2021</li>
+  </ul>
+  <p><strong>.eu domain names</strong></p>
+  <p>Once, buying a .eu domain was a typical choice for website owners looking to adopt a broader European market, and with them being simple to register from within the UK it’s easy to see why.</p>
+  <p>Already, we’re starting to see notices like this from well known UK hosting companies, in this case Heart Internet.</p>
+  <p>If you use a .eu domain name, get in touch, we can help.</p>
+  <p><img class=\"size-medium wp-image-3514 alignleft\" src=\"https://fl1digital.com/stuff/uploads/Screenshot-2019-04-10-at-18.36.16-300x144.png\" alt=\"\" width=\"300\" height=\"144\" srcset=\"https://fl1digital.com/stuff/uploads/Screenshot-2019-04-10-at-18.36.16-300x144.png 300w, https://fl1digital.com/stuff/uploads/Screenshot-2019-04-10-at-18.36.16.png 762w\" sizes=\"(max-width: 300px) 100vw, 300px\" /></p>
+  <p>The post <a rel=\"nofollow\" href=\"https://fl1digital.com/the-impact-of-brexit-on-your-website/\">The impact of Brexit on your website</a> appeared first on <a rel=\"nofollow\" href=\"https://fl1digital.com\">FL1 Digital</a>.</p>
+  ",
+            "wfw:commentRss": "https://fl1digital.com/the-impact-of-brexit-on-your-website/feed/",
+            "slash:comments": "0"
+          },
+          {
+            "title": "B2B Marketing Expo 2020 – FL1 are at the ExCeL London",
+            "link": "https://fl1digital.com/fl1-are-at-the-excel-london-2/",
+            "comments": "https://fl1digital.com/fl1-are-at-the-excel-london-2/#respond",
+            "pubDate": "Wed, 11 Mar 2020 11:55:41 +0000",
+            "dc:creator": "fl1admin",
+            "category": [
+              "FL1",
+              "General",
+              "Marketing",
+              "adwords",
+              "announcements",
+              "business",
+              "expo",
+              "google",
+              "Networking",
+              "workshop"
+            ],
+            "guid": {
+              "-isPermaLink": "false",
+              "#text": "https://www.fl1digital.com/?p=3823"
+            },
+            "description": "<p>Following a hugely successfully show last year, we're back at the B2B Marketing Expo, at ExCeL London on Wednesday 27 and Thursday 28 March 2019 on stand 1752.<br />
+  Come and see what we'll be talking about...</p>
+  <p>The post <a rel=\"nofollow\" href=\"https://fl1digital.com/fl1-are-at-the-excel-london-2/\">B2B Marketing Expo 2020 &#8211; FL1 are at the ExCeL London</a> appeared first on <a rel=\"nofollow\" href=\"https://fl1digital.com\">FL1 Digital</a>.</p>
+  ",
+            "content:encoded": "<p><strong>We’re at the ExCeL London!</strong></p>
+  <p><b>Tuesday 10 &#8211; Wednesday 11 November 2020</b></p>
+  <p>We&#8217;re back again this year at the <strong>ExCeL London</strong> to exhibit as part of this year’s massive <a href=\"http://www.b2bmarketingexpo.co.uk/\" target=\"_blank\" rel=\"noopener noreferrer\">B2B Marketing Expo</a>. With our Technical Director, Jason, presenting the seminar: Testing New Markets with Google Adwords &amp; Analytics.</p>
+  <p>We’ll be on stand <strong>846</strong> showcasing our expertise in: <strong>Web Design / Development, Digital Marketing, Graphic Design &amp; Illustration.</strong> We’d really love to meet you there so that you can hear more about what we do, and we can show you what we’re all about in person!</p>
+  <p>On Thursday, Jason will be speaking about using AdWords to research and test new markets, strategies and products.</p>
+  <p>It&#8217;s well known that online advertising using platforms like Google AdWords can bring traffic and sales, but what about the steps before that? how the right insights can help you avoid expensive mistakes and form better strategies. Jason will be speaking about what&#8217;s really useful and looking at some of Google Analytic&#8217;s latest features.</p>
+  <p>Each year, Jason doesn’t fail to attract huge audiences, and this year’s forward-thinking talk will be no less impressive.</p>
+  <p><img class=\"alignleft wp-image-3503 size-thumbnail\" src=\"https://fl1digital.com/stuff/uploads/IMG_1828-150x150.jpg\" alt=\"\" width=\"150\" height=\"150\" /></p>
+  <p>Grab your tickets now, and we look forward to seeing you at stand <strong>846</strong>!</p>
+  <p><a href=\"http://www.b2bmarketingexpo.co.uk/\" data-saferedirecturl=\"https://www.google.com/url?q=http://www.b2bmarketingexpo.co.uk/&amp;source=gmail&amp;ust=1553252617897000&amp;usg=AFQjCNHpkZob-f0tHx86Egl4BmmtKA5Bhg\">http://www.b2bmarketingexpo.co.uk/</a></p>
+  <p>&nbsp;</p>
+  <p>The post <a rel=\"nofollow\" href=\"https://fl1digital.com/fl1-are-at-the-excel-london-2/\">B2B Marketing Expo 2020 &#8211; FL1 are at the ExCeL London</a> appeared first on <a rel=\"nofollow\" href=\"https://fl1digital.com\">FL1 Digital</a>.</p>
+  ",
+            "wfw:commentRss": "https://fl1digital.com/fl1-are-at-the-excel-london-2/feed/",
+            "slash:comments": "0"
+          },
+          {
+            "title": "FL1 are at the ExCeL London",
+            "link": "https://fl1digital.com/fl1-are-at-the-excel-london/",
+            "comments": "https://fl1digital.com/fl1-are-at-the-excel-london/#respond",
+            "pubDate": "Thu, 21 Mar 2019 12:15:23 +0000",
+            "dc:creator": "fl1admin",
+            "category": [
+              "FL1",
+              "General",
+              "Marketing",
+              "adwords",
+              "announcements",
+              "business",
+              "expo",
+              "google",
+              "Networking",
+              "workshop"
+            ],
+            "guid": {
+              "-isPermaLink": "false",
+              "#text": "https://fl1digital.com/?p=3501"
+            },
+            "description": "<p>Following a hugely successfully show last year, we're back at the B2B Marketing Expo, at ExCeL London on Wednesday 27 and Thursday 28 March 2019 on stand 1752.<br />
+  Come and see what we'll be talking about...</p>
+  <p>The post <a rel=\"nofollow\" href=\"https://fl1digital.com/fl1-are-at-the-excel-london/\">FL1 are at the ExCeL London</a> appeared first on <a rel=\"nofollow\" href=\"https://fl1digital.com\">FL1 Digital</a>.</p>
+  ",
+            "content:encoded": "<p><strong>We’re at the ExCeL London!</strong></p>
+  <p><strong>Wednesday 27<sup> </sup>and Thursday 28 March 2019</strong></p>
+  <p>Following a hugely successfully show last year, we&#8217;re back at the <strong>ExCeL London</strong> to exhibit as part of this year’s massive <a href=\"http://www.b2bmarketingexpo.co.uk/\" target=\"_blank\" rel=\"noopener\">B2B Marketing Expo</a>, with our very own Jason presenting a seminar Testing New Markets with Google Adwords &amp; Analytics.</p>
+  <p>We’ll be on stand <strong>1752</strong> showcasing our expertise in <strong>Web Design &amp; Development and Digital Marketing</strong>. We’d really love to meet you there so that you can hear more about what we do, and we can show you what we’re all about in person.</p>
+  <p>On Thursday, Jason will be speaking about using AdWords to research and test new markets, strategies and products.</p>
+  <p>It&#8217;s well known that online advertising using platforms like Google AdWords can bring traffic and sales, but what about the steps before that? how the right insights can help you avoid expensive mistakes and form better strategies.</p>
+  <p>Each year, Jason doesn’t fail to attract huge audiences, and this year’s forward-thinking talk will be no less impressive.</p>
+  <p><img class=\"alignleft wp-image-3503 size-thumbnail\" src=\"https://fl1digital.com/stuff/uploads/IMG_1828-150x150.jpg\" alt=\"\" width=\"150\" height=\"150\" /></p>
+  <p>Grab your tickets now, and we look forward to seeing you at stand <strong>1752</strong>!</p>
+  <p><a href=\"http://www.b2bmarketingexpo.co.uk/\" data-saferedirecturl=\"https://www.google.com/url?q=http://www.b2bmarketingexpo.co.uk/&amp;source=gmail&amp;ust=1553252617897000&amp;usg=AFQjCNHpkZob-f0tHx86Egl4BmmtKA5Bhg\">http://www.b2bmarketingexpo.co.uk/</a></p>
+  <p>&nbsp;</p>
+  <p>The post <a rel=\"nofollow\" href=\"https://fl1digital.com/fl1-are-at-the-excel-london/\">FL1 are at the ExCeL London</a> appeared first on <a rel=\"nofollow\" href=\"https://fl1digital.com\">FL1 Digital</a>.</p>
+  ",
+            "wfw:commentRss": "https://fl1digital.com/fl1-are-at-the-excel-london/feed/",
+            "slash:comments": "0"
+          },
+          {
+            "title": "Get Ready for WordPress Gutenberg",
+            "link": "https://fl1digital.com/get-ready-for-wordpress-gutenberg/",
+            "comments": "https://fl1digital.com/get-ready-for-wordpress-gutenberg/#respond",
+            "pubDate": "Wed, 29 Aug 2018 15:46:28 +0000",
+            "dc:creator": "fl1admin",
+            "category": [
+              "Hints and Tips",
+              "E-commerce",
+              "Marketing",
+              "Technology",
+              "ecommerce",
+              "Gutenberg",
+              "website",
+              "WordPress"
+            ],
+            "guid": {
+              "-isPermaLink": "false",
+              "#text": "https://fl1digital.com/?p=3429"
+            },
+            "description": "<p>Gutenberg is the most radical update to the WordPress editing experience in years.</p>
+  <p>We look at how that’s going to affect most website, and whether it’s a good thing at all…</p>
+  <p>The post <a rel=\"nofollow\" href=\"https://fl1digital.com/get-ready-for-wordpress-gutenberg/\">Get Ready for WordPress Gutenberg</a> appeared first on <a rel=\"nofollow\" href=\"https://fl1digital.com\">FL1 Digital</a>.</p>
+  ",
+            "content:encoded": "<p>It’s fair to say, the current WordPress visual editor hasn’t had many changes over the years and for the most part, has stayed pretty much the same.</p>
+  <p>Meanwhile, alternatives such as Wix and Squarespace have brought a new inline style of content editing to the web, so was only a matter of time before WordPress changed it’s development path to compete.</p>
+  <p>This great article from Kinsta explains what’s in store, along with some of the pros and cons.</p>
+  <blockquote class=\"wp-embedded-content\" data-secret=\"HbNK3uWKWq\"><p><a href=\"https://kinsta.com/blog/gutenberg-wordpress-editor/\">Diving Into the New Gutenberg WordPress Editor (Pros and Cons)</a></p></blockquote>
+  <p><iframe class=\"wp-embedded-content\" sandbox=\"allow-scripts\" security=\"restricted\" src=\"https://kinsta.com/blog/gutenberg-wordpress-editor/embed/#?secret=HbNK3uWKWq\" data-secret=\"HbNK3uWKWq\" width=\"500\" height=\"282\" title=\"&#8220;Diving Into the New Gutenberg WordPress Editor (Pros and Cons)&#8221; &#8212; Kinsta Managed WordPress Hosting\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\"></iframe></p>
+  <p>If you’d like to see Gutenberg in action for yourself, <a href=\"https://fl1digital.com/contact/\">drop us a line</a> and we’ll give you a guided tour!</p>
+  <p>&nbsp;</p>
+  <p>The post <a rel=\"nofollow\" href=\"https://fl1digital.com/get-ready-for-wordpress-gutenberg/\">Get Ready for WordPress Gutenberg</a> appeared first on <a rel=\"nofollow\" href=\"https://fl1digital.com\">FL1 Digital</a>.</p>
+  ",
+            "wfw:commentRss": "https://fl1digital.com/get-ready-for-wordpress-gutenberg/feed/",
+            "slash:comments": "0"
+          },
+          {
+            "title": "Google to start billing for using maps but what does it really mean?",
+            "link": "https://fl1digital.com/google-to-start-billing-for-using-maps-but-what-does-it-really-mean/",
+            "comments": "https://fl1digital.com/google-to-start-billing-for-using-maps-but-what-does-it-really-mean/#respond",
+            "pubDate": "Fri, 06 Jul 2018 11:04:49 +0000",
+            "dc:creator": "fl1admin",
+            "category": [
+              "Hints and Tips",
+              "General",
+              "Marketing",
+              "Technology",
+              "business",
+              "chrome",
+              "google",
+              "maps",
+              "tech tips",
+              "website"
+            ],
+            "guid": {
+              "-isPermaLink": "false",
+              "#text": "https://fl1digital.com/?p=3381"
+            },
+            "description": "<p>As of the 16th of July 2018, Google will start to charge anyone who uses a Google Maps API on their website. So, what does it really mean and how much could you be charged?</p>
+  <p>The post <a rel=\"nofollow\" href=\"https://fl1digital.com/google-to-start-billing-for-using-maps-but-what-does-it-really-mean/\">Google to start billing for using maps but what does it really mean?</a> appeared first on <a rel=\"nofollow\" href=\"https://fl1digital.com\">FL1 Digital</a>.</p>
+  ",
+            "content:encoded": "<p><span style=\"font-weight: 400;\">If you are a business with a website that isn’t stuck in the early 2000’s (believe me they do still exist), you will most likely have the Google Maps feature embedded somewhere within your website that enables your users and customers to pinpoint exactly where your located. Simple, easy, free, right!? Unfortunately, not for much longer&#8230;</span></p>
+  <p><span style=\"font-weight: 400;\">After the 16th of July, using this feature on your website will incur a charge as part of changes towards more fair usage. That charge will be based on the number of uses of the API (Application Program Interface) and what type of map or API is used. Google will be combining the current 18 individual Maps APIs into three core products: Maps, Routes and Places. </span></p>
+  <p><span style=\"font-weight: 400;\">This means that charges will vary for a wide range of different industries. For example, if you just have the one map on your website to show users where you are, you could have an unlimited number of views monthly compared to a business directory or travel website who will be looking at higher charges. (Note: dynamic maps will allow unlimited free use unless you use features such as Directions or Search Mode). The same applies for Ecommerce websites that will use Maps and Routes features to calculate delivery costs. </span></p>
+  <p><span style=\"font-weight: 400;\">With a monthly credit of $200, most small businesses will probably find themselves not having to pay anything, it will simply depend on the nature of your business and how much your maps really get used. If you’d like to look into the new prices in more detail, view </span><a href=\"https://cloud.google.com/maps-platform/pricing/\" target=\"_blank\" rel=\"noopener\"><span style=\"font-weight: 400;\">Google’s official pricing &amp; plans here</span></a><span style=\"font-weight: 400;\">.</span></p>
+  <p><span style=\"font-weight: 400;\">To break it down, $200 a month will get you:</span></p>
+  <ul>
+  <li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">up to 28,000 free loads of Dynamic Maps; or</span></li>
+  <li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">up to 100,000 free loads of Static Maps; or</span></li>
+  <li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">up to 40,000 free Directions calls; or</span></li>
+  <li style=\"font-weight: 400;\"><span style=\"font-weight: 400;\">up to 40,000 free Geolocation calls.</span></li>
+  </ul>
+  <h3><b>What happens if I don’t upgrade or sign up before the 11th of June? </b></h3>
+  <p><span style=\"font-weight: 400;\">To put it plain and simple, you won’t be able to use the feature, you’ll receive a lovely error or watermark displayed instead which could be pretty damaging to user experience on your website. </span></p>
+  <p><span style=\"font-weight: 400;\">To keep your Maps API running from the 16th of July, you’ll need to upgrade to the latest version which involves creating a Google account and registering with your credit card. This will enable you to have a new API key which will allow you, or your web designer to carry out the upgrade.</span></p>
+  <p><span style=\"font-weight: 400;\">If you’d like to know more about this and Google’s individual Maps, Routes or Places products, you can </span><a href=\"https://cloud.google.com/maps-platform/products/\" target=\"_blank\" rel=\"noopener\"><span style=\"font-weight: 400;\">read more here.</span></a><span style=\"font-weight: 400;\"> To see how we can help your business with Google Maps, FL1’s tech-gods are only a phone call away on 01727 739812 and we love to talk Google&#8230;well maybe Jason or Niall more so than the rest!</span></p>
+  <p>The post <a rel=\"nofollow\" href=\"https://fl1digital.com/google-to-start-billing-for-using-maps-but-what-does-it-really-mean/\">Google to start billing for using maps but what does it really mean?</a> appeared first on <a rel=\"nofollow\" href=\"https://fl1digital.com\">FL1 Digital</a>.</p>
+  ",
+            "wfw:commentRss": "https://fl1digital.com/google-to-start-billing-for-using-maps-but-what-does-it-really-mean/feed/",
+            "slash:comments": "0"
+          }
+        ]
+      }
+    }
+  }

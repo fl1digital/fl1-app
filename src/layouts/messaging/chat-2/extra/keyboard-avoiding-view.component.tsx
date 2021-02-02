@@ -71,6 +71,7 @@ export const KeyboardAvoidingView = (props: KeyboardAvoidingViewProps): React.Re
   const createTranslateAnimation = (params: { offsetValue: number }): Animated.CompositeAnimation => {
     return Animated.timing(translateY, {
       toValue: params.offsetValue,
+      useNativeDriver: true,
       duration: animationDuration,
       easing: Easing.linear,
     });

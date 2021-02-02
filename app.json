@@ -1,18 +1,17 @@
 {
   "expo": {
-    "name": "Kitten Tricks",
-    "slug": "kitten-tricks",
+    "name": "FL1 App",
+    "slug": "fl1-app",
     "version": "2.4.0",
-    "sdkVersion": "36.0.0",
-    "description": "UI Kitten Demo Application",
+    "description": "FL1 Digital App",
     "githubUrl": "https://github.com/akveo/kittenTricks",
     "ios": {
-      "bundleIdentifier": "com.akveo.kittentricks",
+      "bundleIdentifier": "com.fl1.app",
       "appStoreUrl": "https://itunes.apple.com/us/app/kitten-tricks/id1246143230",
       "buildNumber": "3"
     },
     "android": {
-      "package": "com.akveo.kittenTricks",
+      "package": "com.fl1.app",
       "playStoreUrl": "https://play.google.com/store/apps/details?id=com.akveo.kittenTricks",
       "versionCode": 3
     },

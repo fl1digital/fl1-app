@@ -10,7 +10,7 @@ export class Product {
   }
 
   get formattedPrice(): string {
-    return `$${this.price}`;
+    return `£${this.price}`;
   }
 
   get totalPrice(): number {
@@ -20,9 +20,9 @@ export class Product {
   static pinkChair(): Product {
     return new Product(
       'Pink Chair',
-      'Furniture',
+      'Buttons',
       require('../assets/image-product-1.png'),
-      130,
+      10,
       1,
     );
   }
@@ -42,7 +42,7 @@ export class Product {
       'Wood Chair',
       'Furniture',
       require('../assets/image-product-1.png'),
-      125,
+      12,
       1,
     );
   }

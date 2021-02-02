@@ -11,18 +11,18 @@ export class Product {
               readonly options: ProductOption[]) {
   }
 
-  static centralParkApartment(): Product {
+  static thatWasEasyButton(): Product {
     return new Product(
-      'Private Rooms with Central Park View',
-      'The apartment consists of 2 separate bedrooms, 1 bathroom with a hair dryer. A flat-screen TV and Blu-ray player are available.\n' +
-      '\n' +
-      'Rodin Museum is 4.2 km from the apartment, while Orsay Museum is 5 km away. The nearest airport is Paris - Orly Airport, 13 km from the property.',
+      'That Was Easy Button',
+      'The ultimate in FL1 geeky toys, the That Was Easy Button. Press this whenever you\'ve succesfully got rid of a client or got a gnarly bit of code working!' +
+      '\n\n' +
+      'Powered by 2 x AAA batteries, simply press and have "That was Easy" barked at you in a goofy American accent....enjoy!',
       ProductPrice.tenDollarsPerNight(),
-      require('../assets/image-product.jpg'),
+      require('../assets/image-buttons.jpg'),
       [
-        require('../assets/image-product.jpg'),
-        require('../assets/image-product.jpg'),
-        require('../assets/image-product.jpg'),
+        require('../assets/image-hr-button.png'),
+        require('../assets/fl1-usb-lamp.png'),
+        require('../assets/image-panic-button.jpeg'),
       ],
       [
         '2 Guests',
@@ -54,7 +54,7 @@ export class ProductPrice {
   }
 
   static tenDollarsPerNight(): ProductPrice {
-    return new ProductPrice(10, '$', 'night');
+    return new ProductPrice(4.99, '£', 'night');
   }
 }
 
