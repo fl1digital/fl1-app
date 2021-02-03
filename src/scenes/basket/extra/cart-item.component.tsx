@@ -2,52 +2,25 @@ import React from 'react';
 import { Image, StyleSheet, View } from 'react-native';
 import { Button, ListItem, ListItemProps, Text } from '@ui-kitten/components';
 import { CloseIcon, MinusIcon, PlusIcon } from './icons';
-import { Product} from '../../../api/woocommerce.d';
+import { CartContextType, CartItem, Product} from '../../../api/woocommerce.d';
+import { CartContext } from '../../../services/cart-context';
 
 export type CartItemProps = ListItemProps & {
   index: number;
   product: Product;
+  item: CartItem;
   onProductChange: (product: Product, index: number) => void;
   onRemove: (product: Product, index: number) => void;
 };
 
 export const CartListItem = (props: CartItemProps): React.ReactElement => {
+  
+  const { onAddToCart, onRemoveFromCart, onClearCart, onDeductOne } = React.useContext(CartContext) as CartContextType;
 
-  const { style, product, index, onProductChange, onRemove, ...listItemProps } = props;
+  const { style, product, item, index, onProductChange, onRemove, ...listItemProps } = props;
 
   const decrementButtonEnabled = (): boolean => {
-    //return product.amount > 1;
-    return true;
-  };
-
-  const onRemoveButtonPress = (): void => {
-    onRemove(product, index);
-  };
-
-  const onMinusButtonPress = (): void => {
-    const updatedProduct: Product = new Product(
-      product.id,
-      product.title,
-      product.subtitle,
-      product.image,
-      product.price,
-      product.amount - 1,
-    );
-
-    onProductChange(updatedProduct, index);
-  };
-
-  const onPlusButtonPress = (): void => {
-    const updatedProduct: Product = new Product(
-      product.id,
-      product.title,
-      product.subtitle,
-      product.image,
-      product.price,
-      product.amount + 1,
-    );
-
-    onProductChange(updatedProduct, index);
+    return item.quantity > 1;
   };
 
   return (
@@ -56,39 +29,34 @@ export const CartListItem = (props: CartItemProps): React.ReactElement => {
       style={[styles.container, style]}>
       <Image
         style={styles.image}
-        source={product.image}
+        source={{uri: product.images[0].src}}
       />
       <View style={styles.detailsContainer}>
         <Text
           category='s1'>
-          {product.title}
-        </Text>
-        <Text
-          appearance='hint'
-          category='p2'>
-          {product.subtitle}
+          {product.name}
         </Text>
         <Text category='s2'>
-          {product.formattedPrice}
+          £{product.price}
         </Text>
         <View style={styles.amountContainer}>
           <Button
             style={[styles.iconButton, styles.amountButton]}
             size='tiny'
             icon={MinusIcon}
-            onPress={onMinusButtonPress}
+            onPress={()=>onDeductOne(product)}
             disabled={!decrementButtonEnabled()}
           />
           <Text
             style={styles.amount}
             category='s2'>
-            {`${product.amount}`}
+            {`${item.quantity}`}
           </Text>
           <Button
             style={[styles.iconButton, styles.amountButton]}
             size='tiny'
             icon={PlusIcon}
-            onPress={onPlusButtonPress}
+            onPress={()=>onAddToCart(product)}
           />
         </View>
       </View>
@@ -97,7 +65,7 @@ export const CartListItem = (props: CartItemProps): React.ReactElement => {
         appearance='ghost'
         status='basic'
         icon={CloseIcon}
-        onPress={onRemoveButtonPress}
+        onPress={()=>onRemoveFromCart(product)}
       />
     </ListItem>
   );

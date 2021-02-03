@@ -356,4 +356,5 @@ export type CartContextType = {
 	onRemoveFromCart: (item: Product) => void
 	onClearCart: () => void
 	onDeductOne: (item: Product) => void
+	onPostCheckout: () => void
 }

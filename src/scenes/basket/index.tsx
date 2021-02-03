@@ -6,23 +6,35 @@ import { CartContextType, CartItem, Product} from '../../api/woocommerce.d';
 import { CartContext } from '../../services/cart-context';
 import { CartListItem } from './extra/cart-item.component';
 
-export default (): React.ReactElement => {
+export default ({ props }): React.ReactElement => {
 
-  const { cartItems, onAddToCart, onRemoveFromCart, onClearCart, onDeductOne } = React.useContext(CartContext) as CartContextType;
+  const { cartItems, onAddToCart, onRemoveFromCart, onClearCart, onDeductOne, onPostCheckout } = React.useContext(CartContext) as CartContextType;
 
   const styles = useStyleSheet(themedStyle);
   const [products, setProducts] = React.useState<CartItem[]>(cartItems);
 
   const totalCost = (): number => {
-    return products.reduce((acc: number, product: Product): number => acc + product.totalPrice, 0);
+    const totals: number[] = cartItems.map(element => parseFloat(element.product.price) * element.quantity);
+    
+    return totals.reduce(number => number + number);
+    //return (total.toString())
   };
+
+  const onCheckOut = (): void =>{
+    
+    // Post the Checkout request with our cart data
+    onPostCheckout();
+  };
+
+  const onStartShopping = (): void =>{ 
+    props && props.navigate('Products');
+  }
 
   const onItemRemove = (product: Product, index: number): void => {
     onRemoveFromCart(product);
   };
 
   const onItemChange = (product: Product, index: number): void => {
-    //products[index] = product;
     setProducts([...products]);
   };
 
@@ -33,22 +45,25 @@ export default (): React.ReactElement => {
     </Layout>
   );
  
-  const renderProductItem = (info: ListRenderItemInfo<Product>): React.ReactElement => (
+  const renderProductItem = (info: ListRenderItemInfo<CartItem>): React.ReactElement => (
     <CartListItem
       style={styles.item}
       index={info.index}
-      product={info.item}
+      item={info.item} 
+      product={info.item.product}
       onProductChange={onItemChange}
       onRemove={onItemRemove}
     />
   );
 
   return (
+    <>
+    {cartItems.length > 0?
     <Layout
       style={styles.container}
       level='2'>
       <List
-        data={products}
+        data={cartItems}
         renderItem={renderProductItem}
         ListFooterComponent={renderFooter}
       />
@@ -58,12 +73,32 @@ export default (): React.ReactElement => {
         CHECKOUT
       </Button>
     </Layout>
+    :
+    <Layout
+    style={styles.container}
+    level='2'>
+    <Text style={styles.cartHeader}>
+      You have no items in your Basket
+    </Text>
+    <Button
+      onPress={onStartShopping}
+      style={styles.checkoutButton}
+      size='giant'>
+      Start Shopping
+    </Button>
+  </Layout>
+    }
+    </>
   );
 };
 
 const themedStyle = StyleService.create({
   container: {
     flex: 1,
+  },
+  cartHeader: {
+    alignSelf: 'center',
+    marginTop: 20,
   },
   item: {
     borderBottomWidth: 1,

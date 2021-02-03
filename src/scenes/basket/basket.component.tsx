@@ -22,7 +22,7 @@ export const BasketScreen = ({ navigation }): React.ReactElement => {
         title='Basket'
         leftControl={renderDrawerAction()}
       />
-      <ContentView/> 
+      <ContentView props={navigation} /> 
     </SafeAreaLayout>
   );
 };

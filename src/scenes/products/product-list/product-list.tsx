@@ -45,7 +45,6 @@ export const ProductListScreen = ({ navigation, route }): React.ReactElement => 
   // Pick up the screen focus, and use this instead of an open useEffect 
   const isFocused = useIsFocused();
   React.useEffect(() => {
-    console.log('useEffect Loop running');
     if (isFocused)
     {
       fetchPosts();

@@ -39,8 +39,8 @@ export const DispayDate = (date: string): string => {
   export const HtmlDecode = (text: string): string => {
 
     let parsedText: string = text;
-    parsedText = parsedText.replace('<p>', '');
-    parsedText = parsedText.replace('</p>', '');
+    //parsedText = parsedText.replace('<p>', '');
+    //parsedText = parsedText.replace('</p>', '');
     // Add any additional string manipulation here...
     
     return (decode(parsedText));
