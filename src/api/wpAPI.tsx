@@ -30,7 +30,6 @@ export const  wpGetCategoriesUrl  = (params: ProductCategoriesSearchParams ) =>{
   args = MakeWooSearchParamsGeneric(params);
 
   const url = `${config.wp_endpoint}categories/${args}`;      
-  console.log(`Querying API: Categories: ${url}`);
   return (url);
 }
 
@@ -40,7 +39,6 @@ export const  wpGetEventsUrl  = (params: EventSearchParams ) =>{
   args = MakeSearchParamsGeneric(params);
 
   const url = `${config.wp_endpoint}event/${args}`;      
-  console.log(`Querying API: Events: ${url}`);
   return (url);
 }
 
@@ -50,7 +48,6 @@ export const  wpGetPostsUrl  = (params: PostSearchParams ) =>{
   args = MakeSearchParamsGeneric(params);
 
   const url = `${config.wp_endpoint}posts/${args}`;      
-  console.log(`Querying API: Posts: ${url}`);
   return (url);
 }
 
@@ -60,7 +57,6 @@ export const  wpGetPagesUrl  = (params: PageSearchParams ) =>{
   args = MakeSearchParamsGeneric(params);
 
   const url = `${config.wp_endpoint}pages/${args}`;      
-  console.log(`Querying API: Pages: ${url}`);
   return (url);
 }
 
@@ -71,7 +67,6 @@ export const  wooGetProductsUrl  = (params: ProductSearchParams ) =>{
   args += params.category? '&category=' + params.category : "";
 
   const url = `${config.woo_endpoint}products/${args}`;      
-  console.log(`Querying WooCommerce API: Products: ${url}`);
   return (url);
 }
 
@@ -80,8 +75,7 @@ export const  wooGetProductCategoriesUrl  = (params: ProductCategoriesSearchPara
   let args = '';
   args = MakeWooSearchParamsGeneric(params);
 
-  const url = `${config.woo_endpoint}products/categories/${args}`;      
-  console.log(`Querying WooCommerce API: Product Categories: ${url}`);
+  const url = `${config.woo_endpoint}products/categories/${args}`; 
   return (url);
 }
 

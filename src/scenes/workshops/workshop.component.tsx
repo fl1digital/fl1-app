@@ -16,7 +16,7 @@ export const WorkshopDetailsScreen = ({ navigation, route }): React.ReactElement
   const styles = useStyleSheet(themedStyles);
 
   const onBookButtonPress = (): void => {
-    console.log("option pressed");
+
   };
 
   const renderBackAction = (): React.ReactElement => (

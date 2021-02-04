@@ -19,7 +19,6 @@ export const ProductDetailsScreen = ({ navigation, route }): React.ReactElement 
 
   const styles = useStyleSheet(themedStyles);
   const { product } = route.params;
-  console.log(product.images[0].src);
 
   const { onAddToCart } = React.useContext(CartContext) as CartContextType;
 

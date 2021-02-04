@@ -36,7 +36,6 @@ const isOneOfRootRoutes = (currentRoute: RouteProp<any, any>): boolean => {
 
 const TabBarVisibleOnRootScreenOptions = ({ route }): BottomTabNavigationOptions => {
   const currentRoute = route.state && route.state.routes[route.state.index];
-  //console.log(currentRoute);
   return { tabBarVisible: currentRoute && isOneOfRootRoutes(currentRoute) };
 };
 

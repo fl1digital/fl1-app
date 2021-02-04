@@ -19,7 +19,6 @@ export const CategoriesGridScreen = ({ navigation, route }): React.ReactElement 
 
       const response = await axios.get<Category[]>(wooGetProductCategoriesUrl(params));
       setCategories(response.data);
-      console.log(categories);
       setLoading(false);
     } catch (error) {
       setError(error.message);
